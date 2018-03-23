@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
+    <div class="header">
+      <img src="./assets/logo.png" class="title-logo">
+      <h1 class="title">{{ msg }}</h1>
+    </div>
 
     <!-- データバインディング -->
     <a :href="url">My GitHub</a>
@@ -71,6 +73,26 @@ li {
 
 a {
   color: #42b983;
+}
+
+.header {
+  position: relative;
+  height: 25vh;
+  margin-bottom: 5vh;
+  .title-logo {
+    position: absolute;
+    display: inline-block;
+    padding: 10px;
+    width: 10vw;
+    left: 30vw;
+  }
+  .title {
+    position: absolute;
+    display: inline-block;
+    padding: 10px;
+    padding-top: 50px;
+    left: 40vw;
+  }
 }
 
 .event-button {
