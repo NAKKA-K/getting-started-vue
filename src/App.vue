@@ -5,6 +5,9 @@
 
     <!-- データバインディング -->
     <a :href="url">My GitHub</a>
+    <!-- イベントハンドリング -->
+    <p @click="countUp" class="event-button">Count Event</p>
+    <p class="counter">Count is <span class="count-num">{{ counter }}</span>.</p>
 
     <!-- vue links -->
     <h2>Essential Links</h2>
@@ -30,7 +33,13 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      url: 'https://github.com/NAKKA-K'
+      url: 'https://github.com/NAKKA-K',
+      counter: 1
+    }
+  },
+  methods: {
+    countUp() {
+      this.counter++;
     }
   }
 }
@@ -62,5 +71,23 @@ li {
 
 a {
   color: #42b983;
+}
+
+.event-button {
+  position: relative;
+  font-size: 2vw;
+  border: 5px solid #888;
+  width: 10vw;
+  left: 44vw;
+  background-color: silver;
+}
+
+.counter {
+  font-size: 1.5vw;
+  .count-num {
+    font-size: 1.7vw;
+    color: #42b983;
+    text-shadow: 1px 1px 3px #888;
+  }
 }
 </style>
