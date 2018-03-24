@@ -5,6 +5,8 @@
       <h1 class="title">{{ msg }}</h1>
     </div>
 
+    <myComponent />
+
     <!-- データバインディング -->
     <a :href="url">My GitHub</a>
     <!-- イベントハンドリング -->
@@ -34,8 +36,13 @@
 </template>
 
 <script>
+import ExampleComponent from './Example.vue'
+
 export default {
   name: 'app',
+  components: {
+    myComponent: ExampleComponent
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
