@@ -5,8 +5,17 @@
       <h1 class="title">{{ msg }}</h1>
     </div>
 
-    <myComponent />
+    <router-link to='/'><span class="link">top</span></router-link>
+    <router-link to='/example'><span class="link">example</span></router-link>
+    <router-link to='/foo'><span class="link">Foo</span></router-link>
 
+    <div class="router-view">
+      <h1>Router View</h1>
+      <router-view />
+    </div>
+
+    <!-- componentの表示 -->
+    <myComponent></myComponent>
     <!-- データバインディング -->
     <a :href="url">My GitHub</a>
     <!-- イベントハンドリング -->
@@ -127,5 +136,19 @@ a {
     color: #42b983;
     text-shadow: 1px 1px 3px #888;
   }
+}
+
+a {
+  .link {
+    display: block;
+    font-size: 2vw;
+    font-family: serif;
+    text-shadow: 1px 1px 3px #888;
+  }
+}
+
+.router-view {
+  border-top: 5px solid #DDD;
+  border-bottom: 5px solid #DDD;
 }
 </style>
