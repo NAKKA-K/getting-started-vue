@@ -8,6 +8,7 @@
     <router-link to='/'><span class="link">top</span></router-link>
     <router-link to='/example'><span class="link">example</span></router-link>
     <router-link to='/foo'><span class="link">Foo</span></router-link>
+    <router-link :to="{ name: 'Post', params: { id: counter }}"><span class="link">Post Counter</span></router-link>
 
     <div class="router-view">
       <h1>Router View</h1>
