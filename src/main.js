@@ -4,12 +4,14 @@ import Router from 'vue-router'
 
 const Foo = { template: '<div>Foo</div>' }
 import ExampleComponent from './Example.vue'
+import Post from './Post.vue'
 
 Vue.use(Router)
 var router = new Router({
   routes: [
     { path: '/example', component: ExampleComponent },
-    { path: '/foo', component: Foo }
+    { path: '/foo', component: Foo },
+    { path: '/post/:id', component: Post }
   ]
 })
 
