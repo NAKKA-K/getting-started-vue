@@ -11,7 +11,7 @@ var router = new Router({
   routes: [
     { path: '/example', component: ExampleComponent },
     { path: '/foo', component: Foo },
-    { path: '/post/:id', component: Post }
+    { path: '/post/:id', component: Post, name: 'Post' }
   ]
 })
 
